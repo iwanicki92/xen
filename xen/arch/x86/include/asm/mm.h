@@ -102,6 +102,9 @@
 #endif
 #define PGC_count_mask    ((1UL<<PGC_count_width)-1)
 
+/* How much of the directmap is prebuilt at compile time. */
+#define PREBUILT_MAP_LIMIT (1 << L2_PAGETABLE_SHIFT)
+
 #ifndef CONFIG_BIGMEM
 /*
  * This definition is solely for the use in struct page_info (and
