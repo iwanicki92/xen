@@ -9,7 +9,7 @@
  */
 
 #define		APIC_DEFAULT_PHYS_BASE	0xfee00000U
- 
+
 #define		APIC_ID		0x20
 #define			APIC_ID_MASK		(0xFFu<<24)
 #define			GET_xAPIC_ID(x)		(((x)>>24)&0xFFu)
@@ -120,6 +120,10 @@
 
 #define MAX_IO_APICS 128
 
+#ifndef __ASSEMBLER__
+
 extern bool x2apic_enabled;
+
+#endif /* !__ASSEMBLER__ */
 
 #endif
